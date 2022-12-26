@@ -16,7 +16,7 @@ export default function AuthComponent() {
     // set configurations for the API call here
     const configuration = {
       method: "get",
-      url: "https://nodejs-mongodb-auth-app.herokuapp.com/auth-endpoint",
+      url: "http://localhost:9000/auth-endpoint",
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -39,7 +39,7 @@ export default function AuthComponent() {
     cookies.remove("TOKEN", { path: "/" });
     // redirect user to the landing page
     window.location.href = "/";
-  }
+  };
 
   return (
     <div className="text-center">
